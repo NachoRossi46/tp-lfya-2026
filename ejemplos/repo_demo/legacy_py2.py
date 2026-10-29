@@ -2,4 +2,4 @@
 # La herramienta lo informa con un aviso y sigue con el resto del repositorio.
 
 def saludar(nombre):
-    print ("Hola, %s") % nombre
+    print "Hola, %s" % nombre
