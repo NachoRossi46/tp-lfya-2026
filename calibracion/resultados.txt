@@ -1,0 +1,39 @@
+Corpus: 6924 funciones; con >= 30 tokens y >= 3 sentencias: 2595
+
+Clones 'renombrar' con secuencia normalizada IDÉNTICA al original: 398/400
+Negativos (pares de funciones distintas del mismo archivo): 54826
+
+Tabla 1 - Mediana del score por tipo de clon y en negativos
+métrica      renombrar    reordenar        mover     insertar insertar_var       borrar    combinado  negativos(p50/p99)
+jac1              1.00         1.00         1.00         0.93         0.96         0.89         0.93   0.34 / 0.78
+jac2              1.00         0.98         0.97         0.91         0.94         0.88         0.89   0.16 / 0.66
+jac3              1.00         0.93         0.92         0.89         0.93         0.86         0.84   0.07 / 0.59
+jac4              1.00         0.87         0.87         0.88         0.90         0.83         0.79   0.03 / 0.53
+jac5              1.00         0.81         0.82         0.85         0.87         0.82         0.73   0.01 / 0.48
+jac6              1.00         0.75         0.77         0.83         0.85         0.79         0.68   0.00 / 0.43
+lev               1.00         0.85         0.81         0.88         0.80         0.87         0.73   0.21 / 0.66
+comb2             1.00         0.91         0.88         0.89         0.87         0.87         0.80   0.19 / 0.66
+comb3             1.00         0.88         0.85         0.88         0.86         0.86         0.78   0.14 / 0.62
+
+Tabla 2 - Umbral con FPR <= 1% sobre negativos y recall de clones tipo 3 con ese umbral
+métrica  umbral  recall      reordenar        mover     insertar insertar_var       borrar    combinado    AUC
+jac1       0.78   0.958           1.00         1.00         1.00         1.00         0.74         1.00  0.992
+jac2       0.67   0.971           1.00         1.00         1.00         1.00         0.83         1.00  0.996
+jac3       0.59   0.974           1.00         1.00         1.00         1.00         0.86         0.98  0.997
+jac4       0.53   0.970           1.00         1.00         1.00         1.00         0.87         0.95  0.997
+jac5       0.48   0.958           0.97         0.98         1.00         1.00         0.88         0.92  0.997
+jac6       0.44   0.943           0.94         0.94         1.00         1.00         0.89         0.89  0.996
+lev        0.66   0.835           0.83         0.76         0.98         0.96         0.83         0.65  0.988
+comb2      0.66   0.943           0.98         0.95         1.00         1.00         0.85         0.88  0.994
+comb3      0.63   0.938           0.96         0.94         1.00         1.00         0.85         0.86  0.995
+
+Tabla 3 - Recuperación: se busca cada clon entre las 6924 funciones del corpus
+90 consultas
+config        top-1   top-5       reordenar        mover     insertar insertar_var       borrar    combinado   seg/consulta
+jaccard n=2   0.989   0.989           1.00         1.00         1.00         1.00         0.93         1.00      0.12
+jaccard n=3   0.989   0.989           1.00         1.00         1.00         1.00         0.93         1.00      0.18
+jaccard n=4   0.989   0.989           1.00         1.00         1.00         1.00         0.93         1.00      0.20
+levenshtein   0.900   0.967           0.87         0.93         1.00         0.93         0.87         0.80      2.99
+combinada n=3 0.989   0.989           1.00         1.00         1.00         1.00         0.93         1.00      3.58
+
+Tiempo total: 809 s
