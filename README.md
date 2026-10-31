@@ -56,12 +56,12 @@ $ python buscar_similares.py --dir ejemplos/repo_demo --funcion estadisticas.py:
 [aviso] se omite ejemplos/repo_demo/legacy_py2.py: SyntaxError: Missing parentheses in call to 'print'. ...
 Repositorio: ejemplos/repo_demo  (22 funciones en 4 archivos)
 Métrica:     Jaccard sobre 3-gramas  |  umbral de duplicado: 0.60
-Objetivo:    estadisticas.py:12  varianza  (46 tokens)
+Objetivo:    estadisticas.py:9  varianza  (46 tokens)
 
    #  score  duplicado  ubicación                      función
-   1  0.760  SI         copiado/estadisticas_v2.py:13  calcular_varianza
-   2  0.294  -          copiado/estadisticas_v2.py:5   media_aritmetica
-   3  0.294  -          estadisticas.py:4              promedio
+   1  0.760  SI         copiado/estadisticas_v2.py:10  calcular_varianza
+   2  0.294  -          copiado/estadisticas_v2.py:2   media_aritmetica
+   3  0.294  -          estadisticas.py:2              promedio
 ```
 
 Con `--mostrar-normalizado` se ve cada etapa aplicada a la función objetivo:

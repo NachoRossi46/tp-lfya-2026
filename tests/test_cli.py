@@ -8,7 +8,7 @@ from conftest import RAIZ, REPO_DEMO
 def test_buscar_por_archivo_y_nombre(capsys):
     assert main(["--dir", str(REPO_DEMO), "--funcion", "estadisticas.py:contar_pares", "--top", "2"]) == 0
     salida = capsys.readouterr().out
-    assert "copiado/estadisticas_v2.py:24" in salida and "cuantos_pares" in salida
+    assert "copiado/estadisticas_v2.py:21" in salida and "cuantos_pares" in salida
     assert salida.count("\n   ") >= 2   # dos filas de resultados
 
 

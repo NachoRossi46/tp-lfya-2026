@@ -199,7 +199,7 @@ def test_la_poda_da_el_mismo_resultado_que_comparar_contra_todos(indice_demo, me
 
 
 def test_resolver_funcion_por_archivo_y_nombre(indice_demo):
-    assert indice_demo.buscar_funcion("inventario.py:Inventario.valor_total").funcion.linea == 26
+    assert indice_demo.buscar_funcion("inventario.py:Inventario.valor_total").funcion.linea == 23
     assert indice_demo.buscar_funcion("copiado/estadisticas_v2.py:fact").funcion.nombre == "fact"
     # sufijo único de la ruta
     assert indice_demo.buscar_funcion("estadisticas_v2.py:fact").funcion.archivo == "copiado/estadisticas_v2.py"
